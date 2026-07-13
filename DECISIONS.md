@@ -38,7 +38,7 @@ Entry format:
 - Rationale: 3.10+ was informally suggested but not confirmed.
 - Status: OPEN
 
-## [OPEN] Repo stays local only
+## [DECIDED] Pushed to GitHub
 - Date: 2026-07-11
-- Rationale: This is just an alpha — no GitHub push, no remote configured, everything stays local for now per explicit instruction.
-- Status: OPEN
+- Rationale: Superseded the earlier local-only stance — clarified that "keep local" meant the file-copy step from the design chat, not a ban on pushing. Repo created as private (matching `rfc`) via `gh repo create pydantic-message-protocol/pmp-python --private`, all commits pushed, `main` tracking `origin/main`.
+- Status: DECIDED
