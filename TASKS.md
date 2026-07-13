@@ -3,8 +3,7 @@
 ## Active
 
 ## Up Next
-- Add `.github/workflows/ci.yml`: build + run tests (`uv run --no-project --with-editable . --with pytest pytest`) on push/PR. No publish step for now.
-- Try the package against a real cross-repo use case (the thing tomorrow's session is actually for) — will likely surface gaps the RFC didn't anticipate.
+- Try the package against a real cross-repo use case (the thing this work is actually for) — will likely surface gaps the RFC didn't anticipate.
 
 ## Backlog
 - PyPI publishing workflow (deferred)
