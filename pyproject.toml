@@ -13,3 +13,9 @@ dependencies = ["pydantic>=2"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/pmp"]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
