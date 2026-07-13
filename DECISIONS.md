@@ -47,3 +47,8 @@ Entry format:
 - Date: 2026-07-11
 - Rationale: Superseded the earlier local-only stance — clarified that "keep local" meant the file-copy step from the design chat, not a ban on pushing. Repo created as private (matching `rfc`) via `gh repo create pydantic-message-protocol/pmp-python --private`, all commits pushed, `main` tracking `origin/main`.
 - Status: DECIDED
+
+## [DECIDED] CI workflow added and verified locally
+- Date: 2026-07-13
+- Rationale: `.github/workflows/ci.yml` added — build (via `uv build`, exercising the hatchling backend) + test (`uv run --no-project --with-editable . --with pytest pytest`) on push/PR to `main`, matrix over Python 3.10 (the declared minimum) and 3.13. Verified by installing `act` (nektos/act, via Homebrew) and running the actual workflow YAML in Docker locally rather than just replicating the steps in shell — both matrix jobs passed (build succeeded, 31/31 tests passed on each Python version). Required `--container-daemon-socket -` since the host uses Colima (non-default Docker socket path) and this workflow has no docker-in-docker steps to justify bind-mounting it. Per explicit instruction, **not yet pushed** — developing locally for now.
+- Status: DECIDED
